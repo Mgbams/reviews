@@ -9,7 +9,7 @@ const SingleReview = ({ prevSlide, nextSlide }) => {
     <div
       className="card mb-3"
       style={{
-        width: "40rem",
+        width: "38rem",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
