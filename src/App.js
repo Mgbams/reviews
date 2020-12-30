@@ -1,7 +1,12 @@
 import React from "react";
+import Review from "./components";
 
 const App = () => {
-  return <div>Hello boy</div>;
+  return (
+    <div className="App">
+      <Review />
+    </div>
+  );
 };
 
 export default App;
