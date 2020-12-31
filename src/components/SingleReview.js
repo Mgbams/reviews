@@ -4,7 +4,8 @@ import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
 
-const SingleReview = ({ prevSlide, nextSlide }) => {
+const SingleReview = ({ prevSlide, nextSlide, reviews, randomReview }) => {
+  const { id, name, job, image, text } = reviews;
   return (
     <div
       className="card mb-3"
@@ -19,17 +20,15 @@ const SingleReview = ({ prevSlide, nextSlide }) => {
       <div>
         <img
           className="card-img rounded-circle mt-4"
-          src="https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
-          alt="Card image cap"
+          src={image}
+          alt={name}
           style={{ width: "150px", height: "150px" }}
         />
       </div>
       <div className="card-body">
-        <h5 className="card-title text-center">Card title</h5>
-        <p className="card-text text-center">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </p>
+        <h5 className="card-title text-center">{name}</h5>
+        <h5 className="job text-center">{job}</h5>
+        <p className="card-text text-center">{text}</p>
         <div
           style={{
             display: "flex",
@@ -47,7 +46,9 @@ const SingleReview = ({ prevSlide, nextSlide }) => {
           </button>
         </div>
         <p className="surprise-me text-center mt-3">
-          <button className="surprise-me-btn px-2">Surprise Me</button>
+          <button className="surprise-me-btn px-2" onClick={randomReview}>
+            Surprise Me
+          </button>
         </p>
       </div>
     </div>
