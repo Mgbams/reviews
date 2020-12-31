@@ -112,3 +112,19 @@ body {
   background-color: rgb(72, 118, 161);
   color: white;
 }
+
+#quote-marks {
+  position: absolute;
+  left: 14rem;
+  top: 2rem;
+  background-color: var(--clr-primary-7);
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 2.3rem;
+  color: white !important;
+}
+
+.job {
+  text-transform: uppercase;
+  color: var(--clr-primary-7);
+}

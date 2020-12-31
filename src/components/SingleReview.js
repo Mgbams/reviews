@@ -22,12 +22,15 @@ const SingleReview = ({ prevSlide, nextSlide, reviews, randomReview }) => {
           className="card-img rounded-circle mt-4"
           src={image}
           alt={name}
-          style={{ width: "150px", height: "150px" }}
+          style={{ width: "150px", height: "150px", position: "relative" }}
         />
+        <FaQuoteRight id="quote-marks" className="icon-slide" />
       </div>
       <div className="card-body">
-        <h5 className="card-title text-center">{name}</h5>
-        <h5 className="job text-center">{job}</h5>
+        <h5 className="card-title text-center">
+          <strong>{name}</strong>
+        </h5>
+        <h5 className="job text-center job">{job}</h5>
         <p className="card-text text-center">{text}</p>
         <div
           style={{
